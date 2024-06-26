@@ -6,10 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('profile-image').src = data.avatar_url;
             document.getElementById('profile-name').innerText = data.name;
             document.getElementById('profile-bio').innerText = data.bio;
-            document.getElementById('profile-location').innerText = data.location;
-            document.getElementById('profile-blog').href = data.blog;
+            document.getElementById('profile-location').innerText = data.location || 'Não informado';
+            document.getElementById('profile-blog').href = data.blog || '#';
             document.getElementById('profile-followers').innerText = data.followers;
             document.getElementById('github-link').href = data.html_url;
+        })
+        .catch(error => {
+            console.error('Erro ao carregar perfil do GitHub:', error);
         });
 
     // Carregar repositórios do usuário do GitHub
@@ -34,6 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 reposContainer.appendChild(repoElement);
             });
+        })
+        .catch(error => {
+            console.error('Erro ao carregar repositórios do GitHub:', error);
         });
 
     // Carregar conteúdos sugeridos do JSON Server
@@ -65,6 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 carouselInner.appendChild(item);
             });
+        })
+        .catch(error => {
+            console.error('Erro ao carregar conteúdos sugeridos:', error);
         });
 
     // Carregar colegas de trabalho do JSON Server
@@ -85,5 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 colegasContainer.appendChild(colegaElement);
             });
+        })
+        .catch(error => {
+            console.error('Erro ao carregar colegas de trabalho:', error);
         });
 });
