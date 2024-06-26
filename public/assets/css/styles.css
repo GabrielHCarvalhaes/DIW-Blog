@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.cabecalho h1 {
+    margin: 0;
+}
+
+.navegacao {
+    list-style: none;
+    padding: 0;
+}
+
+.navegacao li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.navegacao a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.caixa-infos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.caixa-infos img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.infos {
+    flex: 1;
+}
+
+.estatisticas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.redes a {
+    margin-right: 1rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.repositorios, .colegas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.repositorio, .colega {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.repositorio img, .colega img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    .navegacao li {
+        margin-right: 2rem;
+    }
+
+    .caixa-infos {
+        justify-content: flex-start;
+    }
+
+    .repositorios, .colegas {
+        justify-content: flex-start;
+    }
+}

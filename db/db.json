@@ -1,0 +1,60 @@
+{
+    "conteudosSugeridos": [
+      {
+        "id": 1,
+        "titulo": "Rocketseat",
+        "descricao": "Esses caras são os brabos",
+        "imagem": "assets/img/rocket.png",
+        "url": "https://example.com/indicacao1"
+      },
+      {
+        "id": 2,
+        "titulo": "Fallout",
+        "descricao": "Série muito top, produção 10/10",
+        "imagem": "assets/img/fallout.jpg",
+        "url": "https://www.primevideo.com/dp/amzn1.dv.gti.8276269a-402e-4ece-a2b0-4eb5e2504a05?autoplay=0&ref_=atv_cf_strg_wb"
+      },
+      {
+        "id": 3,
+        "titulo": "Palworld",
+        "descricao": "Jogo absurdo de viciante",
+        "imagem": "assets/img/pal.jpg",
+        "url": "https://store.steampowered.com/app/1623730/Palworld/"
+      },
+      {
+        "id": 4,
+        "titulo": "Elden Ring",
+        "descricao": "Jogo maravilhoso",
+        "imagem": "assets/img/ring.jpg",
+        "url": "https://example.com/indicacao4"
+      },
+      {
+        "id": 5,
+        "titulo": "Valorant",
+        "descricao": "Joguinho meio legal",
+        "imagem": "assets/img/vavaaa.webp",
+        "url": "https://playvalorant.com/pt-br/?gad_source=1&gclid=CjwKCAjw-O6zBhASEiwAOHeGxWRusigMbqN2A_b4bvhu-hNlB8AZnc_rQmpFfGv4UzgX9Xk6T4JuqRoC7NAQAvD_BwE&gclsrc=aw.ds"
+      }
+    ],
+    "colegasDeTrabalho": [
+      {
+        "id": 1,
+        "nome": "Natan Farage",
+        "imagem": "https://avatars.githubusercontent.com/u/164033531?v=4",
+        "url": "https://github.com/FarageNatan"
+      },
+      {
+        "id": 2,
+        "nome": "Felipe Birchall",
+        "imagem": "https://avatars.githubusercontent.com/u/165811745?v=4",
+        "url": "https://github.com/FelipeBirchall"
+      },
+      {
+        "id": 3,
+        "nome": "Paula Nogueira",
+        "imagem": "https://avatars.githubusercontent.com/u/164101684?v=4",
+        "url": "https://github.com/PaulaNogueiraC"
+      }
+    ]
+  }
+  

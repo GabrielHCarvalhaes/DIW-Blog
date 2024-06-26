@@ -1,0 +1,17 @@
+{
+    "name": "diw-blog",
+    "version": "1.0.0",
+    "description": "Projeto de Blog DIW",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "start:server": "json-server --watch db/db.json --port 3001"
+    },
+    "dependencies": {
+      "json-server": "^0.16.3"
+    },
+    "author": "Seu Nome",
+    "license": "MIT"
+  }
+
+  
