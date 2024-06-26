@@ -1,26 +1,26 @@
-const jsonServer = require('json-server');
+const express = require('express');
 const path = require('path');
+const cors = require('cors');
+const app = express();
+const PORT = 3000; // Porta em que o servidor irá rodar
 
-const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, 'db', 'db.json'));
-const middlewares = jsonServer.defaults({
-  static: path.join(__dirname, 'public') // Servir arquivos estáticos da pasta public
+app.use(cors()); // Adiciona middleware CORS
+
+// Serve arquivos estáticos da pasta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Serve o db.json
+app.use('/db', express.static(path.join(__dirname, 'db')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Middlewares padrão do JSON Server
-server.use(middlewares);
-
-// Custom routes before JSON Server router
-server.get('/api', (req, res) => {
-  res.jsonp({ message: 'Welcome to the API' });
+app.get('/repo.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'repo.html'));
 });
 
-// Usando o router do JSON Server
-server.use('/api', router);
-
-// Iniciando o servidor na porta 3001
-const PORT = process.env.PORT || 3001;
-server.listen(PORT, () => {
-  console.log(`JSON Server is running on http://localhost:${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
 
